@@ -19,12 +19,16 @@ public class catch_player : RAINAction
 		{
 
 			int caught_time=ai.WorkingMemory.GetItem<int>("catch_time");
+			bool leave=ai.WorkingMemory.GetItem<bool>("leave");
 
 
-			if (caught_time <= 3)
+			if (caught_time <= 3&&leave)
 			{
 				caught_time++;
 				ai.WorkingMemory.SetItem<int>("catch_time",caught_time);
+				ai.Motor.Speed++;
+				ai.WorkingMemory.SetItem<bool>("leave",false);
+				Debug.Log (leave);
 			}
 
 		}
