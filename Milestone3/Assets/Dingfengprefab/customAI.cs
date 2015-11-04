@@ -5,10 +5,12 @@ using UnityEngine;
 [RAINSerializableClass]
 public class customAI : CustomAIElement
 {
+	public Transform player;
+
 	public override void AIInit()
 	{
 		base.AIInit();
-		
+
 		// This is equivilent to an Awake call
 	}
 	
