@@ -28,7 +28,7 @@ public class catch_player : RAINAction
 				ai.WorkingMemory.SetItem<int>("catch_time",caught_time);
 				ai.Motor.Speed++;
 				ai.WorkingMemory.SetItem<bool>("leave",false);
-				Debug.Log (leave);
+				//Debug.Log (leave);
 			}
 
 		}

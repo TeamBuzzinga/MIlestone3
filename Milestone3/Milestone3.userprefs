@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI\Actions\catch_player.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Dingfengprefab\GameOverManager.cs">
     <Files>
-      <File FileName="Assets\AI\Actions\catch_player.cs" Line="24" Column="4" />
+      <File FileName="Assets\Dingfengprefab\GameOverManager.cs" Line="31" Column="26" />
+      <File FileName="Assets\AI\Actions\catch_player.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
