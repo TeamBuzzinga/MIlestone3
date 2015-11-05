@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AI\Actions\catch_player.cs" />
+     <Compile Include="Assets\AI\Actions\catch_player2.cs" />
+     <Compile Include="Assets\AI\Actions\enable_sensors.cs" />
      <Compile Include="Assets\Dingfengprefab\GameOverManager.cs" />
      <Compile Include="Assets\Dingfengprefab\customAI.cs" />
      <Compile Include="Assets\Scripts\BallMechanics.cs" />
@@ -62,6 +64,7 @@
      <Compile Include="Assets\Scripts\WalkMechanics.cs" />
      <Compile Include="Assets\SidFolder\FootstepsMute.cs" />
      <Compile Include="Assets\SidFolder\FootstepsOn.cs" />
+     <Compile Include="Assets\action.cs" />
      <None Include="Assets\Prefabs\Player\TaichiCharacterPack\Shaders\toon_cutoff.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorLineShader.shader" />
