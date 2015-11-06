@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 	private CapsuleCollider col;					// a reference to the capsule collider of the character
 	private AudioSource audioSource;
 	private ThrowMechanics throwMechanics;
+	private NpcTakeDamage npcTakeDamage;
 	//private AddForcetoObject push;
 
 	static int idleState = Animator.StringToHash("Base Layer.Idle");	
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
 	static int jumpState = Animator.StringToHash("Base Layer.Jump");				// and are used to check state for various actions to occur
 	static int crouchState = Animator.StringToHash("Base Layer.Crouch");
 	static int crouchWalkState = Animator.StringToHash("Base Layer.CrouchWalk");
-	
+	static int attackState = Animator.StringToHash("Base Layer.Attack");
 
 	void Start ()
 	{
@@ -43,12 +44,13 @@ public class PlayerController : MonoBehaviour
 		if(anim.layerCount ==2)
 			anim.SetLayerWeight(1, 1);
 		audioSource = GetComponent<AudioSource> ();
+		npcTakeDamage = GameObject.FindGameObjectWithTag ("npc").GetComponent<NpcTakeDamage> ();
 	}
 
 
 
 	
-	void FixedUpdate ()
+	void Update ()
 	{
 		float h = Input.GetAxis("Horizontal");				// setup h variable as our horizontal input axis
 		float v = Input.GetAxis("Vertical");				// setup v variables as our vertical input axis
@@ -64,6 +66,28 @@ public class PlayerController : MonoBehaviour
 			layer2CurrentState = anim.GetCurrentAnimatorStateInfo(1);	// set our layer2CurrentState variable to the current state of the second Layer (1) of animation
 
 
+		if (currentBaseState.nameHash == idleState) {
+			if (Input.GetKeyDown (KeyCode.V)) {
+				anim.SetTrigger ("Attack");
+				Ray ray1 = new Ray(transform.position + Vector3.up, transform.forward);
+				Debug.DrawRay(transform.position + Vector3.up, transform.forward);
+				RaycastHit objectHit = new RaycastHit();
+				
+				if (Physics.Raycast(ray1, out objectHit)) {
+					if(objectHit.distance <= 2f && objectHit.transform.CompareTag("npc")){
+						//					push = objectHit.transform.gameObject.GetComponent<AddForcetoObject> ();
+						//					push.addForce();
+						npcTakeDamage.takeDamage();
+					}
+				}
+			}
+		}
+
+//		if (currentBaseState.nameHash == attackState) {
+//			if (Input.GetKey (KeyCode.V)) {
+//				anim.SetBool ("Attack", true);
+//			}
+//		}
 
 		if (currentBaseState.nameHash == locoState) {
 //			audioSource.Play();
