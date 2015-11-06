@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI\Actions\prediction.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI\Actions\catch_player2.cs">
     <Files>
-      <File FileName="Assets\AI\Actions\prediction.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="84" Column="4" />
+      <File FileName="Assets\Dingfengprefab\GameOverManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\AI\Actions\catch_player.cs" Line="1" Column="1" />
+      <File FileName="Assets\AI\Actions\catch_player2.cs" Line="43" Column="2" />
+      <File FileName="Assets\AI\Actions\take_damage.cs" Line="1" Column="1" />
+      <File FileName="Assets\AI\Actions\destroy_body.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NpcTakeDamage.cs" Line="20" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
