@@ -49,6 +49,7 @@
      <Compile Include="Assets\AI\Actions\catch_player.cs" />
      <Compile Include="Assets\AI\Actions\catch_player2.cs" />
      <Compile Include="Assets\AI\Actions\enable_sensors.cs" />
+     <Compile Include="Assets\AI\Actions\prediction.cs" />
      <Compile Include="Assets\Dingfengprefab\GameOverManager.cs" />
      <Compile Include="Assets\Dingfengprefab\customAI.cs" />
      <Compile Include="Assets\Scripts\BallMechanics.cs" />

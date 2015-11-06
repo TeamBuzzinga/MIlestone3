@@ -30,7 +30,6 @@ public class catch_player2 : RAINAction
 				caught_time++;
 				ai.WorkingMemory.SetItem<int>("catch_time",caught_time);
 			}
-			
 		}
 		
 		return ActionResult.SUCCESS;

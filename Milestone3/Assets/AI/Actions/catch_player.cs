@@ -29,6 +29,7 @@ public class catch_player : RAINAction
 				ai.Motor.Speed++;
 				ai.WorkingMemory.SetItem<bool>("leave",false);
 				//Debug.Log (leave);
+
 			}
 
 		}
